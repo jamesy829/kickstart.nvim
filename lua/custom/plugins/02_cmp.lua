@@ -4,11 +4,12 @@ return {
   opts = {
     sources = require('cmp').config.sources {
       { name = 'buffer', max_item_count = 2 },
-      { name = 'codeium', max_item_count = 2 },
+      -- { name = 'codeium', max_item_count = 2 },
+      -- { name = 'copilot', group_index = 2 },
       { name = 'cmp_tabnine', max_item_count = 2 },
       { name = 'nvim_lsp' },
-      { name = 'luasnip' },
       { name = 'path' },
+      { name = 'luasnip' },
     },
     mapping = require('cmp').mapping.preset.insert {
       ['<C-a>'] = require('cmp').mapping.complete(),

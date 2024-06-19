@@ -189,6 +189,14 @@ vim.keymap.set('n', '<C-h>', '<C-w><C-h>', { desc = 'Move focus to the left wind
 vim.keymap.set('n', '<C-l>', '<C-w><C-l>', { desc = 'Move focus to the right window' })
 vim.keymap.set('n', '<C-j>', '<C-w><C-j>', { desc = 'Move focus to the lower window' })
 vim.keymap.set('n', '<C-k>', '<C-w><C-k>', { desc = 'Move focus to the upper window' })
+vim.keymap.set('n', 'vv', '<C-w>v', { desc = 'Split window vertically' })
+vim.keymap.set('n', 'ss', '<C-w>s', { desc = 'Split window horizontally' })
+vim.keymap.set('n', 'Q', '<C-w>q', { desc = 'Close current window' })
+
+-- Run test in terminal with neotest
+vim.keymap.set('n', '<leader>Tn', ':lua require("neotest").run.run()<CR>', { desc = 'Run nearest test in terminal' })
+vim.keymap.set('n', '<leader>Tf', ':lua require("neotest").run.run(vim.fn.expand("%"))<CR>', { desc = 'Run current test in terminal' })
+vim.keymap.set('n', '<leader>Tl', ':lua require("neotest").run.run_last()<CR>', { desc = 'Run last test in terminal' })
 
 -- [[ Basic Autocommands ]]
 --  See `:help lua-guide-autocommands`
